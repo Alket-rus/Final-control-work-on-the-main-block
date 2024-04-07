@@ -36,4 +36,19 @@
         }
         return ReducedArray;
     }
+
+    public static void PrintArray(string[] ReducedArray, string[] ArrayStrging)
+    {
+        Console.WriteLine("Изначальный массив:");
+        foreach (var i in ArrayStrging)
+        {
+            Console.WriteLine($"\"{i}\"");
+        }
+        Console.WriteLine();
+        Console.WriteLine("Строк меньше или равно 3 в массиве:");
+        foreach (var j in ReducedArray)
+        {
+            Console.WriteLine($"\"{j}\"");
+        }
+    }
 }
