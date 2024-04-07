@@ -13,4 +13,27 @@
 
         return Strging;
     }
+
+    public static string[] ArrayReduction(string[] ArrayStrging)
+    {
+        int count = 0;
+        foreach (string str in ArrayStrging)
+        {
+            if (str.Length <= 3)
+            {
+                count++;
+            }
+        }
+        string[] ReducedArray = new string[count];
+        int index = 0;
+        foreach (string str in ArrayStrging)
+        {
+            if (str.Length <= 3)
+            {
+                ReducedArray[index] = str;
+                index++;
+            }
+        }
+        return ReducedArray;
+    }
 }
