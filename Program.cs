@@ -2,28 +2,37 @@
 {
     public static string[] EnteringLines()
     {
-        int NumberOfLines = 3;
-        string[] Strging = new string[NumberOfLines];
-        for (int i = 0; i < NumberOfLines;)
+        int i = 0;
+        string[] inputStrings = new string[0];
+        while (true)
         {
-            Console.WriteLine($"Введите строку №{i + 1}:");
-            Strging[i] = Console.ReadLine()!;
+            Console.WriteLine($"Введите строку №{i + 1} или нажмите Q чтобы закончить:");
+            string input = Console.ReadLine()!;
             Console.WriteLine();
-            if (Strging[i] == "")
+            if (input == "")
             {
                 Console.WriteLine("Не обнаружен ни один символ, пожалуйста, введите хотя бы 1 символ.");
             }
+            if (input == "Q" && input == "q")
+            {
+                return inputStrings;
+            }
             else
             {
+                Array.Resize(ref inputStrings, inputStrings.Length + 1);
+                inputStrings[inputStrings.Length - 1] = input;
                 i++;
             }
         }
-
-        return Strging;
     }
 
     public static string[] ArrayReduction(string[] ArrayStrging)
     {
+        if (ArrayStrging == null || ArrayStrging.Length == 0)
+        {
+            return new string[0];
+        }
+
         int count = 0;
         foreach (string str in ArrayStrging)
         {
