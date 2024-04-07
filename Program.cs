@@ -9,6 +9,14 @@
             Console.WriteLine($"Введите строку №{i + 1}:");
             Strging[i] = Console.ReadLine()!;
             Console.WriteLine();
+            if (Strging[i] == "")
+            {
+                Console.WriteLine("Не обнаружен ни один символ, пожалуйста, введите хотя бы 1 символ.");
+            }
+            else
+            {
+                i++;
+            }
         }
 
         return Strging;
