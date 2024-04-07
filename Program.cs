@@ -51,4 +51,10 @@
             Console.WriteLine($"\"{j}\"");
         }
     }
+
+    public static void Main()
+    {
+        string[] ArrayStrging = EnteringLines();
+        PrintArray(ArrayReduction(ArrayStrging), ArrayStrging);
+    }
 }
