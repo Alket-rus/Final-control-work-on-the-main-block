@@ -3,13 +3,13 @@
     public static string[] EnteringLines()
     {
         int NumberOfLines = 3;
-        string[] Strging = new string[NumberOfLines];
+        string[] InputStrings = new string[NumberOfLines];
         for (int i = 0; i < NumberOfLines;)
         {
             Console.WriteLine($"Введите строку №{i + 1}:");
-            Strging[i] = Console.ReadLine()!;
+            InputStrings[i] = Console.ReadLine()!;
             Console.WriteLine();
-            if (Strging[i] == "")
+            if (InputStrings[i] == "")
             {
                 Console.WriteLine("Не обнаружен ни один символ, пожалуйста, введите хотя бы 1 символ.");
             }
@@ -19,7 +19,7 @@
             }
         }
 
-        return Strging;
+        return InputStrings;
     }
 
     public static string[] ArrayReduction(string[] ArrayStrging)
